@@ -22,7 +22,7 @@ module "ec2" {
   source               = "./modules"
   launch_template_name = "example-launch-template"
   image_id             = data.aws_ami.example.id
-  instance_type        = "t2.micro" 
+  instance_type        = var.instance_type 
   key_name             = "your-key-pair" 
   security_group_names = ["your-security-group"] 
   subnet_id            = "subnet-xxxxxxxx"
